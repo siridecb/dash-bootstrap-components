@@ -1,0 +1,75 @@
+.wrapper {
+  display: flex;
+  width: 100%;
+}
+
+#sidebar {
+  width: 260px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  z-index: 999;
+  background: #627177;
+  color: #fff;
+  transition: all 0.3s;
+}
+
+#sidebar .sidebar-header {
+  display: block;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.sidebar-header h3 {
+  margin: 0;
+}
+
+#content {
+  width: calc(100% - 260px);
+  padding-top: 20px;
+  min-height: 100vh;
+  transition: all 0.3s;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-bottom: 100px;
+}
+
+#sidebar a {
+  cursor: pointer;
+  padding: 10px;
+  display: block;
+  color: white;
+  padding-left: 20px;
+}
+
+#sidebar a:hover {
+  background-color: #2891c1;
+  text-decoration: none;
+}
+
+.sidebar-collapse {
+  background-color: rgba(255,255,255,0.05);
+}
+
+#sidebar .toggler {
+  padding: 10px;
+}
+
+#sidebar .toggler:hover {
+  border-left: white 2px solid;
+  padding-left: 8px;
+}
+
+#sidebar .dropdown-chevron{
+  transition: transform 0.2s ease-in-out;
+}
+
+#sidebar .toggler-active .dropdown-chevron{
+  transform: rotate(-90deg);
+}
+
+._dash-undo-redo {
+  display: none;
+}
